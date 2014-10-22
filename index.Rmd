@@ -1,0 +1,56 @@
+---
+title       : US Arrests App Pitch
+subtitle    : Coursera's Data Products Course Project, Oct 2014
+author      : Kasim Te
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## What is this?
+
+This is an example Slidify presentation created for Coursera's Data Products course in October 2014.
+
+For this project, I created a simple Shiny application. The presentation and code are hosted online at the links below.
+
+- Application: https://kasimte.shinyapps.io/shiny-app/
+- Code: https://github.com/kasimte/coursera-data-products-project
+
+--- .class #id 
+
+## The App
+
+The app ([hosted here](https://kasimte.shinyapps.io/shiny-app/)) uses the USArrests dataset included in R and uses three simple linear models to predict arrest rates based on urban population percentage.
+
+You can change the urban population percentage using a slider and see the rates change (see screenshot below).
+
+![screenshot](assets/img/slidify-screenshot.png "Screenshot")
+
+---
+
+## The code
+
+The code can be seen completely on Github [here](https://github.com/kasimte/coursera-data-products-project). We can show partially what the app is doing by running some R code right here.
+
+
+```{r}
+library(shiny)
+library(datasets)
+percent <- 72
+murderModel <- lm(Murder ~ UrbanPop, data=USArrests)
+predict(murderModel,data.frame(UrbanPop = c(72)))
+```
+
+---
+
+## <center>The End</center>
+
+<center>Thank you for taking the time to visit.</center>
+
+
+
+

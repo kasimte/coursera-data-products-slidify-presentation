@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>US Arrests App Pitch</title>
+  <meta charset="utf-8">
+  <meta name="description" content="US Arrests App Pitch">
+  <meta name="author" content="Kasim Te">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>US Arrests App Pitch</h1>
+    <h2>Coursera's Data Products Course Project, Oct 2014</h2>
+    <p>Kasim Te<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What is this?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This is an example Slidify presentation created for Coursera&#39;s Data Products course in October 2014.</p>
+
+<p>For this project, I created a simple Shiny application. The presentation and code are hosted online at the links below.</p>
+
+<ul>
+<li>Application: <a href="https://kasimte.shinyapps.io/shiny-app/">https://kasimte.shinyapps.io/shiny-app/</a></li>
+<li>Code: <a href="https://github.com/kasimte/coursera-data-products-project">https://github.com/kasimte/coursera-data-products-project</a></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>The App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The app (<a href="https://kasimte.shinyapps.io/shiny-app/">hosted here</a>) uses the USArrests dataset included in R and uses three simple linear models to predict arrest rates based on urban population percentage.</p>
+
+<p>You can change the urban population percentage using a slider and see the rates change (see screenshot below).</p>
+
+<p><img src="assets/img/slidify-screenshot.png" alt="screenshot" title="Screenshot"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The code</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The code can be seen completely on Github <a href="https://github.com/kasimte/coursera-data-products-project">here</a>. We can show partially what the app is doing by running some R code right here.</p>
+
+<pre><code class="r">library(shiny)
+library(datasets)
+percent &lt;- 72
+murderModel &lt;- lm(Murder ~ UrbanPop, data=USArrests)
+predict(murderModel,data.frame(UrbanPop = c(72)))
+</code></pre>
+
+<pre><code>##        1 
+## 7.923238
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2><center>The End</center></h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center>Thank you for taking the time to visit.</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What is this?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The App'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The code'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='<center>The End</center>'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
